@@ -10,8 +10,16 @@ function weightInitializer(input_neurons, output_neurons){
         sqrt(num) returns square root of a float
         randomGaussian(μ, σ) returns a value from a Gaussian distribution with mean μ and std σ
     */
-
+    let weights = [];
     // Write your code here
+    for(let i=0;i<input_neurons;i++){
+        let temp = [];
+        for(let j=0;j<output_neurons;j++){
+            temp.append(randomGussian(0,sqrt(2/input_neurons)));
+        }
+        weights.append(temp);
+    }
+    return weights;
 }
 
 function biasInitializer(neurons){
@@ -21,6 +29,11 @@ function biasInitializer(neurons){
         Initialized as all zeros
     */
     // Write your code here
+    let bias = [];
+    for(let i=0;i<neurons;i++){
+        bias.append(0);
+    }
+    return bias;
 }
 
 function relu(x){
@@ -38,6 +51,11 @@ function relu(x){
             return a list whose i-th element is relu's output of the i-th element of x
         */
         // Write your code here
+        for(let i;i<length(x);i++){
+            if(x[i]<0)
+                x[i]=0;
+        }
+        return x;
     }
     else{
 
@@ -46,6 +64,9 @@ function relu(x){
             return relu's output of x
         */
         // Write your code here
+        if(x<0)
+            x=0;
+        return x;
     }
 }
 
@@ -67,6 +88,12 @@ function binarize(x){
             return a list whose i-th element is the binarize output of the i-th element of x
         */
         // Write your code here
+        for(let i;i<length(x);i++){
+            if(x[i]<0)
+                x[i]=0;
+            else
+                x[i]=1;
+        }
     }
     else{
         /*
@@ -74,7 +101,12 @@ function binarize(x){
             return binarize's output of number x
         */
         // Write your code here
+        if(x<0)
+            x=0;
+        else
+            x=1;
     }
+    return x;
 }
 
 class Layer{
