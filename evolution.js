@@ -14,6 +14,7 @@ class Evolution{
         this.fitness = [];
         this.maxfitvals = [];
         this.generation = 0;
+        this.mostfit = 0;
     }
     startLife(){
         for(let i=0; i<population; i++){
@@ -48,7 +49,7 @@ class Evolution{
             4. Sample the car index from the probability_selection distribution's cumulative density function.
             5. Create a new list newpop, in which add a cloned version of the fittest car. This won't be mutated because
             as you can see in the mutate function, i starts from 1.
-            6. Using (4) and (5), generate the new population. Note that chooseFittest parameter should also be used,
+            6. Using (4) and (5), generate the new population. Note that chooseFittest parameter should` also be used,
             in which we choose the fittest car with a probability of "chooseFittest". Ultimately, store the new population
             back in this.pop array. Note that objects are assigned by reference in JavaScript and hence
             you need to use the given clone function to assign by value.
@@ -60,7 +61,49 @@ class Evolution{
         */
 
          // Write your code here
-         
+        let probabilty = [];
+        let sum = 0;
+        for(let i=0;i<population;i++){
+            sum+=this.fitness[i];
+        }
+        for(let i=0;i<population;i++){
+            probabilty.push(exp(this.fitness[i]/sum));
+        }
+        let probabilty_sum = 0;
+        for(let i=0;i<population;i++){
+            probabilty_sum+=probabilty[i];
+        }
+        for(let i=0;i<population;i++){
+            probabilty[i] = probabilty[i]/probabilty_sum;
+        } 
+        
+        let max = Math.max.apply(Math,this.fitness);
+        let index = this.fitness.findIndex(max);
+        this.maxfitvals.push(max);
+        this.mostfit = index
+
+        let newpop = [];
+        newpop.push(this.pop[this.mostfit]);
+        let j = 1;
+        while(j<25){
+            let x = random()
+            let i = -1;
+            let cdf  = 0
+            while(true){
+                if(cdf>x){
+                break;
+                }
+                else{
+                    i++;
+                    cdf = this.fitness[i];
+                } 
+            }
+            if(this.fitness[i]>=chooseFittest){
+                newpop.push(this.pop[i]);
+                j++;
+            }
+        }
+        this.pop = newpop;
 
     }
     mutateGeneration(){
