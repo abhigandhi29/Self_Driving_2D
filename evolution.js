@@ -95,10 +95,10 @@ class Evolution{
                 }
                 else{
                     i++;
-                    cdf += this.probability[i];
+                    cdf += this.probabilty[i];
                 } 
             }
-            if(this.probability[i]>=chooseFittest){
+            if(this.probabilty[i]>=chooseFittest*this.probabilty[this.mostfit]){
                 newpop.push(this.pop[i]);
                 j++;
             }
