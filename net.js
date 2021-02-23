@@ -10,16 +10,8 @@ function weightInitializer(input_neurons, output_neurons){
         sqrt(num) returns square root of a float
         randomGaussian(μ, σ) returns a value from a Gaussian distribution with mean μ and std σ
     */
-    let weights = [];
     // Write your code here
-    for(let i=0;i<input_neurons;i++){
-        let temp = [];
-        for(let j=0;j<output_neurons;j++){
-            temp.append(randomGussian(0,sqrt(2/input_neurons)));
-        }
-        weights.append(temp);
-    }
-    return weights;
+   
 }
 
 function biasInitializer(neurons){
@@ -29,11 +21,7 @@ function biasInitializer(neurons){
         Initialized as all zeros
     */
     // Write your code here
-    let bias = [];
-    for(let i=0;i<neurons;i++){
-        bias.append(0);
-    }
-    return bias;
+
 }
 
 function relu(x){
