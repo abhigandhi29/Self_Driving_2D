@@ -95,7 +95,7 @@ class Evolution{
                 }
                 else{
                     i++;
-                    cdf = this.fitness[i];
+                    cdf += this.fitness[i];
                 } 
             }
             if(this.fitness[i]>=chooseFittest){
