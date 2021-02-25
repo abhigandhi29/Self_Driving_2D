@@ -83,25 +83,29 @@ class Evolution{
         this.mostfit = index
 
         let newpop = [];
-        newpop.push(this.pop[this.mostfit]);
+        newpop.push(clone(this.pop[this.mostfit]));
         let j = 1;
-        while(j<25){
+        while(j<population){
             let x = random()
+            if(x<chooseFittest){
+                newpop.push(clone(this.pop[this.mostfit]));
+                j++;
+                continue;
+            }
             let i = -1;
             let cdf  = 0
+            let y = random()
             while(true){
-                if(cdf>x){
-                break;
+                if(cdf>y){
+                    break;
                 }
                 else{
                     i++;
                     cdf += this.probabilty[i];
                 } 
             }
-            if(this.probabilty[i]>=chooseFittest*this.probabilty[this.mostfit]){
-                newpop.push(this.pop[i]);
-                j++;
-            }
+            newpop.push(clone(this.pop[i]));
+            j++;
         }
         this.pop = newpop;
 
