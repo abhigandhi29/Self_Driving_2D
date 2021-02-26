@@ -11,6 +11,17 @@ function weightInitializer(input_neurons, output_neurons){
         randomGaussian(μ, σ) returns a value from a Gaussian distribution with mean μ and std σ
     */
     // Write your code here
+
+    var wt = new Array();
+
+    for (let i=0;i<output_neurons;i++) {
+    wt[i]=new Array();
+    for (let j=0;j<input_neurons;j++) {
+    wt[i][j]=randomGaussian(0,sqrt(2/input_neurons));
+    }
+    }
+   
+    return wt;
    
 }
 
@@ -21,6 +32,11 @@ function biasInitializer(neurons){
         Initialized as all zeros
     */
     // Write your code here
+    new bias=[];
+    for (let i=0;i<neurons;i++){
+        bias.push(0);
+    }
+    return bias;
 
 }
 
@@ -200,6 +216,7 @@ class Network{
             is already implemented in this file
         */
          // Write your code here
+
     }
     set(network){
         this.layer1.set(network.layer1);
