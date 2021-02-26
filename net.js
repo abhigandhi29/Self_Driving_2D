@@ -32,7 +32,7 @@ function biasInitializer(neurons){
         Initialized as all zeros
     */
     // Write your code here
-    new bias=[];
+    let bias=[];
     for (let i=0;i<neurons;i++){
         bias.push(0);
     }
@@ -55,9 +55,11 @@ function relu(x){
             return a list whose i-th element is relu's output of the i-th element of x
         */
         // Write your code here
-        for(let i;i<length(x);i++){
+        //console.log("hereee");
+        for(let i=0;i<x.length;i++){
             if(x[i]<0)
                 x[i]=0;
+                //console.log(i," ",x[i]);
         }
         return x;
     }
@@ -92,7 +94,7 @@ function binarize(x){
             return a list whose i-th element is the binarize output of the i-th element of x
         */
         // Write your code here
-        for(let i;i<length(x);i++){
+        for(let i=0;i<x.length;i++){
             if(x[i]<0)
                 x[i]=0;
             else
@@ -216,6 +218,7 @@ class Network{
             is already implemented in this file
         */
          // Write your code here
+         
 
     }
     set(network){

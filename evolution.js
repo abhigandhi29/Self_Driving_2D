@@ -78,7 +78,7 @@ class Evolution{
         } 
         
         let max = Math.max.apply(Math,this.fitness);
-        let index = this.fitness.findIndex(max);
+        let index = this.fitness.indexOf(max);
         this.maxfitvals.push(max);
         this.mostfit = index
 
@@ -101,13 +101,14 @@ class Evolution{
                 }
                 else{
                     i++;
-                    cdf += this.probabilty[i];
+                    cdf += probabilty[i];
                 } 
             }
             newpop.push(clone(this.pop[i]));
             j++;
         }
         this.pop = newpop;
+        this.generation++;
 
     }
     mutateGeneration(){
