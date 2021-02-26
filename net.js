@@ -117,7 +117,7 @@ class Layer{
         */
 
         // Write your code here
-        return matrixaddition(matrixmultiplication(this.weight,X), this,bias)
+        return matrixaddition(matrixmultiplication(this.weight,X), this.bias)
 
     }
     set(layer){
