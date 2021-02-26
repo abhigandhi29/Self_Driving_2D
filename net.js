@@ -117,6 +117,7 @@ class Layer{
         */
 
         // Write your code here
+        return matrixaddition(matrixmultiplication(this.weight,X), this,bias)
 
     }
     set(layer){
@@ -144,6 +145,8 @@ class Layer{
                 */
 
                 // Write your code here
+                let a = randomGaussian(0, mutationParameter);
+                this.weight[i][j] += a; 
 
             }
         }
@@ -158,6 +161,8 @@ class Layer{
             */
 
             // Write your code here
+            let a = randomGaussian(0, mutationParameter);
+            this.bias[i] +=a
 
         }
     }
