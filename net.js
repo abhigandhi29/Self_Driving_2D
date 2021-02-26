@@ -218,6 +218,11 @@ class Network{
             is already implemented in this file
         */
          // Write your code here
+         let x1=this.layer1.forward(X);
+         let x2=this.layer2.forward(relu(x1));
+         let x3=this.layer3.forward(relu(x2));
+         let x4=this.layer4.forward(relu(x3));
+         return binarize(x4);
          
 
     }
