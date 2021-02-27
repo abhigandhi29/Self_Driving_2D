@@ -12,7 +12,7 @@ function weightInitializer(input_neurons, output_neurons){
     */
     // Write your code here
 
-    var wt = new Array();
+    let wt = new Array();
 
     for (let i=0;i<output_neurons;i++) {
     wt[i]=new Array();
