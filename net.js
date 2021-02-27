@@ -15,10 +15,10 @@ function weightInitializer(input_neurons, output_neurons){
     let wt = new Array();
 
     for (let i=0;i<output_neurons;i++) {
-    wt[i]=new Array();
-    for (let j=0;j<input_neurons;j++) {
-    wt[i][j]=randomGaussian(0,sqrt(2/input_neurons));
-    }
+        wt[i]=new Array();
+        for (let j=0;j<input_neurons;j++) {
+            [i][j]=randomGaussian(0,sqrt(2/input_neurons));
+        }
     }
    
     return wt;
