@@ -217,18 +217,14 @@ class Network{
             layer4 must be passed through the binarize function which
             is already implemented in this file
         */
-         // Write your code here
-         X = this.layer1.forward(X);
-         X = relu(X);
-         X = this.layer2.forward(X);
-         X = relu(X);
-         X = this.layer3.forward(X);
-         X = relu(X);
-         //console.log(X);
-         X = this.layer4.forward(X);
-         X = binarize(X);
-         //console.log(X);
-         return X;
+
+         X=this.layer1.forward(X);
+         X=this.layer2.forward(relu(X));
+         X=this.layer3.forward(relu(X));
+         X=this.layer4.forward(relu(X));
+         return binarize(X);
+         
+
 
     }
     set(network){
