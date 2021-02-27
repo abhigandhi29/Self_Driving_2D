@@ -21,6 +21,7 @@ class Evolution{
         
         this.i=0;
         this.j=0;
+        this.z=0;
     }
     startLife(){
         this.generation=0;
@@ -92,6 +93,7 @@ class Evolution{
         let max = Math.max.apply(Math,this.fitness);
         let index = this.fitness.indexOf(max);
         this.maxfitvals.push(max);
+        //console.log(max);
         this.mostfit = index
 
         let newpop = [];
@@ -122,13 +124,9 @@ class Evolution{
         this.pop = newpop;
         this.generation++;
         if(this.generation>=10){
-            const fs = require('fs') ;
-   
-            fs.writeFile('Output.txt', this.mostfit);
-            fs.writeFile(' ');
-            if(this.j==10){
-                fs.writeFile('\n');
-            }
+            console.log(chooseFittest)
+            console.log(mutationParameter)
+            console.log(this.maxfitvals)
             this.startLife();
         }
 
@@ -150,17 +148,21 @@ class Evolution{
     }
 
     experiment(){
-        chooseFittest=cf[this.i];
-        mutationParameter=mp[this.j];
+        
+        
+        if(this.z%1==0){
+            chooseFittest=cf[this.i];
+            mutationParameter=mp[this.j];
+            this.j++;
+            if(this.j==10){
 
-        this.j++;
-        if(this.j==10){
-
-            this.j=0;
-            this.i++;
-        }
-        if(this.i==10){
-            this.i=0;
-        }       
+                this.j=0;
+                this.i++;
+            }
+            if(this.i==10){
+                this.i=0;
+            }
+        }    
+        this.z++;   
     }
 }
