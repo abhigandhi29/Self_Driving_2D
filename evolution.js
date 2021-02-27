@@ -1,7 +1,7 @@
 let population = 25;
 let mutationParameter = 4e-2;
 let chooseFittest = 0.5;
-let mp=[0.01,0.03,0.05,0.075,0.1,0.15,0.2,0.25,0.4,0.5];
+let mp=[0.01,0.04,0.08,0.16,0.4];
 let cf=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
 
 
@@ -16,6 +16,7 @@ class Evolution{
         this.pop =  [];   
         this.fitness = [];
         this.maxfitvals = [];
+        this.val = [];
         this.generation = 0;
         this.mostfit = 0;
         
@@ -124,9 +125,19 @@ class Evolution{
         this.pop = newpop;
         this.generation++;
         if(this.generation>=10){
-            console.log(chooseFittest)
-            console.log(mutationParameter)
-            console.log(this.maxfitvals)
+            this.val.push(max)
+            if(this.z%10==0){
+                console.log(chooseFittest)
+                console.log(mutationParameter)
+                let avg = 0;
+                for(let k=0;k<this.val.length;k++){
+                    avg+=this.val[k];
+                }
+                avg= avg/this.val.length;
+                console.log(avg)
+                console.log(this.val)
+                this.val = [];
+            }
             this.startLife();
         }
 
@@ -150,7 +161,7 @@ class Evolution{
     experiment(){
         
         
-        if(this.z%1==0){
+        if(this.z%10==0){
             chooseFittest=cf[this.i];
             mutationParameter=mp[this.j];
             this.j++;
