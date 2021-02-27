@@ -2,7 +2,7 @@ let population = 25;
 let mutationParameter = 4e-2;
 let chooseFittest = 0.5;
 let mp=[0.01,0.04,0.08,0.16,0.4];
-let cf=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
+let cf=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.1];
 
 
 function clone(car){
@@ -19,6 +19,7 @@ class Evolution{
         this.val = [];
         this.generation = 0;
         this.mostfit = 0;
+        this.gen_count = [];
         
         this.i=0;
         this.j=0;
@@ -124,18 +125,24 @@ class Evolution{
         }
         this.pop = newpop;
         this.generation++;
+        if(max>120 || this.generation==10){
+            this.gen_count.push(this.generation);
+            this.generation = 10;
+        }
+
         if(this.generation>=10){
-            this.val.push(max)
-            if(this.z%10==0){
-                console.log(chooseFittest)
-                console.log(mutationParameter)
+            this.val.push(max);
+            if(this.z%5==0){
+                console.log(chooseFittest);
+                console.log(mutationParameter);
                 let avg = 0;
                 for(let k=0;k<this.val.length;k++){
                     avg+=this.val[k];
                 }
                 avg= avg/this.val.length;
-                console.log(avg)
-                console.log(this.val)
+                console.log(avg);
+                console.log(this.val);
+                console.log(this.gen_count);
                 this.val = [];
             }
             this.startLife();
@@ -161,7 +168,7 @@ class Evolution{
     experiment(){
         
         
-        if(this.z%10==0){
+        if(this.z%5==0){
             chooseFittest=cf[this.i];
             mutationParameter=mp[this.j];
             this.j++;
