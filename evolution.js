@@ -1,6 +1,9 @@
 let population = 25;
 let mutationParameter = 4e-2;
 let chooseFittest = 0.5;
+let mp=[0.01,0.03,0.05,0.075,0.1,0.15,0.2,0.25,0.4,0.5];
+let cf=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
+
 
 function clone(car){
   let res = new Car();
@@ -15,8 +18,15 @@ class Evolution{
         this.maxfitvals = [];
         this.generation = 0;
         this.mostfit = 0;
+        
+        this.i=0;
+        this.j=0;
     }
     startLife(){
+        this.generation=0;
+        this.pop=[];
+        this.maxfitvals = [];
+        this.experiment();
         for(let i=0; i<population; i++){
             this.pop.push(new Car());
         }
@@ -28,6 +38,8 @@ class Evolution{
             this.fitness.push(0);
         }
     }
+
+
 
     select(){
 
@@ -109,6 +121,16 @@ class Evolution{
         }
         this.pop = newpop;
         this.generation++;
+        if(this.generation>=10){
+            const fs = require('fs') ;
+   
+            fs.writeFile('Output.txt', this.mostfit);
+            fs.writeFile(' ');
+            if(this.j==10){
+                fs.writeFile('\n');
+            }
+            this.startLife();
+        }
 
     }
     mutateGeneration(){
@@ -125,5 +147,20 @@ class Evolution{
             }
         }
         return changed;
+    }
+
+    experiment(){
+        chooseFittest=cf[this.i];
+        mutationParameter=mp[this.j];
+
+        this.j++;
+        if(this.j==10){
+
+            this.j=0;
+            this.i++;
+        }
+        if(this.i==10){
+            this.i=0;
+        }       
     }
 }
