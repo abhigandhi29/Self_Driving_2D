@@ -2,7 +2,7 @@ let population = 25;
 let mutationParameter = 4e-2;
 let chooseFittest = 0.5;
 let mp=[0.01,0.04,0.08,0.16,0.4];
-let cf=[0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.1];
+let cf=[0.9];
 
 function clone(car){
   let res = new Car();
