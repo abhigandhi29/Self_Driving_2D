@@ -98,3 +98,133 @@ evolution.js:136 0.4
 evolution.js:142 566.6
 evolution.js:143 (5) [37, 64, 2480, 63, 189]
 evolution.js:144 (5) [10, 10, 7, 10, 9]
+
+0.5
+evolution.js:136 0.01
+evolution.js:142 48
+evolution.js:143 (5) [10, 130, 16, 52, 32]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.5
+evolution.js:136 0.04
+evolution.js:142 40.6
+evolution.js:143 (5) [8, 12, 99, 76, 8]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.5
+evolution.js:136 0.08
+evolution.js:142 118.4
+evolution.js:143 (5) [42, 233, 37, 38, 242]
+evolution.js:144 (5) [10, 8, 10, 10, 9]
+evolution.js:135 0.5
+evolution.js:136 0.16
+evolution.js:142 104.4
+evolution.js:143 (5) [83, 269, 112, 13, 45]
+evolution.js:144 (5) [10, 3, 10, 10, 10]
+evolution.js:135 0.5
+evolution.js:136 0.4
+evolution.js:142 104.6
+evolution.js:143 (5) [34, 51, 64, 205, 169]
+evolution.js:144 (5) [10, 10, 10, 7, 9]
+
+0.6
+evolution.js:136 0.01
+evolution.js:142 49.8
+evolution.js:143 (5) [28, 46, 136, 31, 8]
+evolution.js:144 (5) [10, 10, 9, 10, 10]
+evolution.js:135 0.6
+evolution.js:136 0.04
+evolution.js:142 112.6
+evolution.js:143 (5) [275, 208, 57, 15, 8]
+evolution.js:144 (5) [7, 8, 10, 10, 10]
+evolution.js:135 0.6
+evolution.js:136 0.08
+evolution.js:142 64
+evolution.js:143 (5) [18, 23, 28, 243, 8]
+evolution.js:144 (5) [10, 10, 10, 8, 10]
+evolution.js:135 0.6
+evolution.js:136 0.16
+evolution.js:142 53.4
+evolution.js:143 (5) [53, 38, 31, 62, 83]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.6
+evolution.js:136 0.4
+evolution.js:142 110.4
+evolution.js:143 (5) [32, 32, 269, 138, 81]
+evolution.js:144 (5) [10, 10, 8, 6, 10]
+
+0.7
+evolution.js:136 0.01
+evolution.js:142 35.2
+evolution.js:143 (5) [8, 9, 8, 135, 16]
+evolution.js:144 (5) [10, 10, 10, 3, 10]
+evolution.js:135 0.7
+evolution.js:136 0.04
+evolution.js:142 102.8
+evolution.js:143 (5) [53, 295, 132, 8, 26]
+evolution.js:144 (5) [10, 3, 4, 10, 10]
+evolution.js:135 0.7
+evolution.js:136 0.08
+evolution.js:142 114.2
+evolution.js:143 (5) [25, 9, 160, 54, 323]
+evolution.js:144 (5) [10, 10, 7, 10, 7]
+evolution.js:135 0.7
+evolution.js:136 0.16
+evolution.js:142 26.8
+evolution.js:143 (5) [15, 51, 8, 23, 37]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.7
+evolution.js:136 0.4
+evolution.js:142 122
+evolution.js:143 (5) [437, 31, 52, 59, 31]
+evolution.js:144 (5) [4, 10, 10, 10, 10]
+
+0.8
+evolution.js:136 0.01
+evolution.js:142 22.2
+evolution.js:143 (5) [16, 28, 28, 9, 30]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.8
+evolution.js:136 0.04
+evolution.js:142 59.8
+evolution.js:143 (5) [190, 8, 52, 8, 41]
+evolution.js:144 (5) [6, 10, 10, 10, 10]
+evolution.js:135 0.8
+evolution.js:136 0.08
+evolution.js:142 89.8
+evolution.js:143 (5) [27, 109, 184, 78, 51]
+evolution.js:144 (5) [10, 10, 9, 10, 10]0: 101: 102: 93: 104: 10length: 5__proto__: Array(0)
+evolution.js:135 0.8
+evolution.js:136 0.16
+evolution.js:142 83.6
+evolution.js:143 (5) [29, 133, 145, 59, 52]
+evolution.js:144 (5) [10, 6, 4, 10, 10]
+evolution.js:135 0.8
+evolution.js:136 0.4
+evolution.js:142 148.2
+evolution.js:143 (5) [135, 369, 52, 25, 160]
+evolution.js:144 (5) [2, 3, 10, 10, 7]
+
+0.9
+evolution.js:136 0.01
+evolution.js:142 45.4
+evolution.js:143 (5) [8, 54, 52, 8, 105]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.9
+evolution.js:136 0.04
+evolution.js:142 43.4
+evolution.js:143 (5) [8, 54, 31, 116, 8]
+evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:135 0.9
+evolution.js:136 0.08
+evolution.js:142 56.2
+evolution.js:143 (5) [27, 55, 140, 29, 30]
+evolution.js:144 (5) [10, 10, 7, 10, 10]
+evolution.js:135 0.9
+evolution.js:136 0.16
+evolution.js:142 256.8
+evolution.js:143 (5) [66, 299, 113, 753, 53]
+evolution.js:144 (5) [10, 3, 10, 4, 10]
+evolution.js:135 0.9
+evolution.js:136 0.4
+evolution.js:142 109.4
+evolution.js:143 (5) [52, 30, 218, 135, 112]
+evolution.js:144 (5) [10, 10, 10, 8, 10]
