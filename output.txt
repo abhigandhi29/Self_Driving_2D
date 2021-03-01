@@ -171,9 +171,9 @@ evolution.js:143 (5) [25, 9, 160, 54, 323]
 evolution.js:144 (5) [10, 10, 7, 10, 7]
 evolution.js:135 0.7
 evolution.js:136 0.16
-evolution.js:142 26.8
-evolution.js:143 (5) [15, 51, 8, 23, 37]
-evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:142 175.8
+evolution.js:143 (5) [110, 23, 593, 52, 101]
+evolution.js:144 (5) [10, 10, 4, 10, 10]
 evolution.js:135 0.7
 evolution.js:136 0.4
 evolution.js:142 122
@@ -183,8 +183,8 @@ evolution.js:144 (5) [4, 10, 10, 10, 10]
 evolution.js:135 0.8
 evolution.js:136 0.01
 evolution.js:142 22.2
-evolution.js:143 (5) [16, 28, 28, 9, 30]
-evolution.js:144 (5) [10, 10, 10, 10, 10]
+evolution.js:143 (5) [40, 8, 8, 161, 33]
+evolution.js:144 (5) [10, 10, 10, 8, 10]
 evolution.js:135 0.8
 evolution.js:136 0.04
 evolution.js:142 59.8
