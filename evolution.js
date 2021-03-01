@@ -1,8 +1,8 @@
 let population = 25;
 let mutationParameter = 4e-2;
 let chooseFittest = 0.5;
-let mp=[0.01,0.04,0.08,0.16,0.4];
-let cf=[0.9];
+let mp=[0.01,0.08,0.16,0.4];
+let cf=[0.3,0.4,0.9];
 
 function clone(car){
   let res = new Car();
@@ -28,7 +28,8 @@ class Evolution{
         this.generation=0;
         this.pop=[];
         this.maxfitvals = [];
-        this.experiment();
+        if(test_type==0)
+            this.experiment();
         for(let i=0; i<population; i++){
             this.pop.push(new Car());
         }
@@ -124,28 +125,38 @@ class Evolution{
         }
         this.pop = newpop;
         this.generation++;
-        if(max>120 || this.generation==10){
-            this.gen_count.push(this.generation);
-            this.generation = 10;
-        }
+        if(test_type==0){
+            if(max>120 || this.generation==10){
+                this.gen_count.push(this.generation);
+                this.generation = 10;
+            }
         
-        if(this.generation>=10){
+            if(this.generation>=10){
+                this.val.push(max);
+                if(this.z%5==0){
+                    console.log(chooseFittest);
+                    console.log(mutationParameter);
+                    let avg = 0;
+                    for(let k=0;k<this.val.length;k++){
+                        avg+=this.val[k];
+                    }
+                    avg= avg/this.val.length;
+                    console.log(avg);
+                    console.log(this.val);
+                    console.log(this.gen_count);
+                    this.val = [];
+                    this.gen_count = [];
+                }
+                this.startLife();
+            }
+        }
+        if(test_type==1){
             this.val.push(max);
-            if(this.z%5==0){
+            if(this.generation==15){
                 console.log(chooseFittest);
                 console.log(mutationParameter);
-                let avg = 0;
-                for(let k=0;k<this.val.length;k++){
-                    avg+=this.val[k];
-                }
-                avg= avg/this.val.length;
-                console.log(avg);
                 console.log(this.val);
-                console.log(this.gen_count);
-                this.val = [];
-                this.gen_count = [];
             }
-            this.startLife();
         }
 
     }
