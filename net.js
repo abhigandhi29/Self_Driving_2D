@@ -1,3 +1,8 @@
+// Jagriti Agrawal | 29IE10037
+// Abhishek Gandhi | 19CS10031
+// Abhilash Datta  | 19CS30001
+
+
 function weightInitializer(input_neurons, output_neurons){
 
     /*
