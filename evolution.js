@@ -3,8 +3,8 @@
 // Abhilash Datta  | 19CS30001
 
 let population = 25;
-let mutationParameter = 0.08;
-let chooseFittest = 0.8;
+let mutationParameter = 4e-2;
+let chooseFittest = 0.5;
 let mp=[0.01,0.08,0.16,0.4];
 let cf=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0];
 
