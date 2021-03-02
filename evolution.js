@@ -1,6 +1,6 @@
 let population = 25;
-let mutationParameter = 4e-2;
-let chooseFittest = 0.5;
+let mutationParameter = 0.08;
+let chooseFittest = 0.8;
 let mp=[0.01,0.08,0.16,0.4];
 let cf=[0.3,0.4,0.9];
 
